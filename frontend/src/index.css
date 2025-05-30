@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+    background: #F4F6FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* F4F6FF */

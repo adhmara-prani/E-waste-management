@@ -1,0 +1,86 @@
+import React from 'react'
+import logo from '../../assets/logo.svg'
+import hamIcon from '../../assets/hamburger-menu.svg'
+import { useState } from 'react';
+
+
+const Navbar = () => {
+  const [Open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(prev => !prev)
+  }
+
+  return (
+  <div>
+    <div className="hidden sm:flex navbar h-10 w-full shadow-md ">
+            {/*left half*/}
+            <div className='flex ml-10 items-center'>
+                <img className='max-sm:size-12 sm:max-lg:size-13 lg:size-14 cursor-pointer' src={logo} alt="my_logo" />
+                {/* <span className='text-black ml-5'>RE-juvenation</span> */}
+            </div>
+
+            {/*right half */}
+            <div className="flex items-center gap-5 ml-auto mr-10 text-black">
+              <ul className="flex gap-7">
+                <li className='cursor-pointer'><a>My Dashboard</a></li>
+                <li className='cursor-pointer'><a>Pricing</a></li>
+                <li className='cursor-pointer'><a>About</a></li>
+              </ul>
+
+              <div>
+                <button className="btn hover:bg-gradient-to-br hover:from-violet-600 hover:to-sky-600 transition duration-250">Get Started</button> {/* Use hamburger below sm width */}
+              </div>
+            </div>
+        </div>
+
+    <div className='flex sm:hidden navbar h-10 bg-base-100'>
+      <img onClick={toggleMenu} className='size-10 cursor-pointer' src={hamIcon} alt="hamburger" />
+    </div>
+  </div>
+    
+//     <div className="navbar bg-base-100 shadow-sm">
+//   <div className="navbar-start">
+//     <div className="dropdown">
+//       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+//         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg>
+//       </div>
+//       <ul
+//         tabIndex={0}
+//         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+//         <li><a>Item 1</a></li>
+//         <li>
+//           <a>Parent</a>
+//           <ul className="p-2">
+//             <li><a>Submenu 1</a></li>
+//             <li><a>Submenu 2</a></li>
+//           </ul>
+//         </li>
+//         <li><a>Item 3</a></li>
+//       </ul>
+//     </div>
+//     <a className="font-semibold text-xl ml-2">RE-juvination</a>
+//   </div>
+//   <div className="navbar-center hidden lg:flex">
+//     <ul className="menu menu-horizontal px-1">
+//       <li><a>Item 1</a></li>
+//       <li>
+//         <details>
+//           <summary>Parent</summary>
+//           <ul className="p-2">
+//             <li><a>Submenu 1</a></li>
+//             <li><a>Submenu 2</a></li>
+//           </ul>
+//         </details>
+//       </li>
+//       <li><a>Item 3</a></li>
+//     </ul>
+//   </div>
+//   <div className="navbar-end">
+//     <a className="btn">Button</a>
+//   </div>
+// </div>
+//   ) GENERIC DAISY UI NAVBAR
+)}
+
+export default Navbar
