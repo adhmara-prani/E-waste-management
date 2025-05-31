@@ -1,12 +1,10 @@
 import React from 'react'
-import Hero from './pages/Hero/Hero.jsx'
-import Navbar from './components/Navbar/Navbar.jsx'
+import Home from './pages/Home/Home.jsx'
 
 const App = () => {
   return (
     <div className='flex flex-col h-screen w-fit'>
-      <Navbar/>
-      <Hero/>
+      <Home/>
     </div>
   )
 }

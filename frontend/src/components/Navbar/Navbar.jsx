@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
 import hamIcon from '../../assets/hamburger-menu.svg'
+import closeIcon from '../../assets/closeIcon.svg'
 import { useState } from 'react';
 
 
@@ -8,20 +9,20 @@ const Navbar = () => {
   const [Open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setOpen(prev => !prev)
+    setOpen(!Open);
   }
 
   return (
   <div>
     <div className="hidden sm:flex navbar h-10 w-full shadow-md ">
             {/*left half*/}
-            <div className='flex ml-10 items-center'>
+            <div className='flex ml-5 items-center'>
                 <img className='max-sm:size-12 sm:max-lg:size-13 lg:size-14 cursor-pointer' src={logo} alt="my_logo" />
                 {/* <span className='text-black ml-5'>RE-juvenation</span> */}
             </div>
 
             {/*right half */}
-            <div className="flex items-center gap-5 ml-auto mr-10 text-black">
+            <div className="flex items-center gap-5 ml-auto mr-5 text-black font-medium">
               <ul className="flex gap-7">
                 <li className='cursor-pointer'><a>My Dashboard</a></li>
                 <li className='cursor-pointer'><a>Pricing</a></li>
@@ -29,13 +30,29 @@ const Navbar = () => {
               </ul>
 
               <div>
-                <button className="btn hover:bg-gradient-to-br hover:from-violet-600 hover:to-sky-600 transition duration-250">Get Started</button> {/* Use hamburger below sm width */}
+                <button className="btn text-black w-35 bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250">Get Started</button> {/* Use hamburger below sm width */}
               </div>
             </div>
         </div>
 
     <div className='flex sm:hidden navbar h-10 bg-base-100'>
-      <img onClick={toggleMenu} className='size-10 cursor-pointer' src={hamIcon} alt="hamburger" />
+      <div>
+        <img onClick={toggleMenu} className='size-10 cursor-pointer stroke-black' src={!Open ? closeIcon : hamIcon} alt="hamburger" />
+      </div>
+
+      {!Open && (
+        <div className='absolute mt-82 w-[96%] text-black font-semibold z-1 bg-[#EEF1FF] p-4 rounded-xl'>
+
+          <ul className='flex items-center justify-center gap-10 flex-col'>
+            <li className='cursor-pointer'><a>My Dashboard</a></li>
+            <li className='cursor-pointer'><a>Pricing</a></li>
+            <li className='cursor-pointer'><a>About</a></li>
+
+            <button className='btn text-black w-35 bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250'>Get Started</button>
+          </ul>
+
+        </div>
+      )}
     </div>
   </div>
     
