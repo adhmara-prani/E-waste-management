@@ -48,7 +48,7 @@ const Navbar = () => {
             <li className='cursor-pointer'><a>Pricing</a></li>
             <li className='cursor-pointer'><a>About</a></li>
 
-            <button type='button' className='btn text-black w-35 bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250'>Get Started</button>
+            <button type='button' className='w-full btn text-black bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250'>Get Started</button>
           </ul>
 
         </div>

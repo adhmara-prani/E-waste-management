@@ -3,7 +3,7 @@ import Home from './pages/Home/Home.jsx'
 
 const App = () => {
   return (
-    <div className='flex flex-col h-fit w-fit'>
+    <div className='scroll-smooth flex flex-col h-fit w-fit'>
       <Home/>
     </div>
   )
