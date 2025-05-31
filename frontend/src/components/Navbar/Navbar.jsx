@@ -6,14 +6,14 @@ import { useState } from 'react';
 
 
 const Navbar = () => {
-  const [Open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setOpen(!Open);
+    setOpen(!open);
   }
 
   return (
-  <div>
+  <nav>
     <div className="hidden sm:flex navbar h-10 w-full shadow-md ">
             {/*left half*/}
             <div className='flex ml-5 items-center'>
@@ -37,10 +37,10 @@ const Navbar = () => {
 
     <div className='flex sm:hidden navbar h-10 bg-base-100'>
       <div>
-        <img onClick={toggleMenu} className='size-10 cursor-pointer stroke-black' src={!Open ? closeIcon : hamIcon} alt="hamburger" />
+        <img onClick={toggleMenu} className='size-10 cursor-pointer stroke-black' src={open ? closeIcon : hamIcon} alt="hamburger" />
       </div>
 
-      {!Open && (
+      {open && (
         <div className='absolute mt-82 w-[96%] text-black font-semibold z-1 bg-[#EEF1FF] p-4 rounded-xl'>
 
           <ul className='flex items-center justify-center gap-10 flex-col'>
@@ -48,13 +48,13 @@ const Navbar = () => {
             <li className='cursor-pointer'><a>Pricing</a></li>
             <li className='cursor-pointer'><a>About</a></li>
 
-            <button className='btn text-black w-35 bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250'>Get Started</button>
+            <button type='button' className='btn text-black w-35 bg-[#EEF1FF] hover:text-white hover:bg-gradient-to-b hover:from-indigo-400 hover:to-purple-400 transition duration-250'>Get Started</button>
           </ul>
 
         </div>
       )}
     </div>
-  </div>
+  </nav>
     
 //     <div className="navbar bg-base-100 shadow-sm">
 //   <div className="navbar-start">
