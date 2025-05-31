@@ -1,7 +1,6 @@
 import React from 'react'
 import heroImg from '../../assets/hero_components.jpg'
 
-// bg-[#E4F9F5]
 const Hero = () => {
   return (
     <section className='max-h-[200vh] border-b-2 border-black'>

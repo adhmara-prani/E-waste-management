@@ -69,9 +69,7 @@ const features = [
 const Features = () => {
   return (
     <section
-      className="bg-[#d2daff] py-16 px-6 sm:px-12 lg:px-24"
-      aria-labelledby="features-title"
-    >
+      className="bg-[#d2daff] py-16 px-6 sm:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto text-center">
         <h2
           id="features-title"
@@ -81,13 +79,11 @@ const Features = () => {
         </h2>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ title, description, icon }, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="mb-4">{icon}</div>
+            <div key={idx} className="bg-white rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="mb-4">{icon}
+              </div>
               <h3 className="text-xl font-semibold text-indigo-800 mb-2">
-                {title}
+              {title}
               </h3>
               <p className="text-gray-700">{description}</p>
             </div>
