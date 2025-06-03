@@ -77,7 +77,7 @@ const Features = () => {
         >
           Why Choose RE-juvenation?
         </h2>
-        <div className="grid grid-cols-1 gap-5">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ title, description, icon }, idx) => (
             <div key={idx} className="bg-white rounded-xl p-6 shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
               <div className="mb-4">{icon}
@@ -95,3 +95,4 @@ const Features = () => {
 };
 
 export default Features;
+// will change
